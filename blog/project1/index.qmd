@@ -12,6 +12,3 @@ Let's investigate the relationship between fuel efficiency (`mpg`) and engine di
 
 Here is a plot:
 
-```{r}
-
-```

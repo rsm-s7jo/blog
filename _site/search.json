@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Resume",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "My Projects",
     "section": "",
-    "text": "Resume"
+    "text": "Analysis of Cars\n\n\n\n\n\n\nYour Name\n\n\nApr 22, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,39 +14,11 @@
     "text": "Here is a paragraph about me!"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "My Projects",
-    "section": "",
-    "text": "Analysis of Cars\n\n\n\n\nYour Name\nApr 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "blog/project1/index.html",
     "href": "blog/project1/index.html",
     "title": "Analysis of Cars",
     "section": "",
-    "text": "Let’s investigate the relationship between fuel efficiency (mpg) and engine displacement (disp) from the mtcars dataset. Those variables have a correlation of -0.85.\n\n\nHere is a plot:"
-  },
-  {
-    "objectID": "blog/project1/index.html#section-1",
-    "href": "blog/project1/index.html#section-1",
-    "title": "Welcome to My Dummy Blog",
-    "section": "",
-    "text": "Here is some dummy content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus."
-  },
-  {
-    "objectID": "blog/project1/index.html#section-2---code-sample",
-    "href": "blog/project1/index.html#section-2---code-sample",
-    "title": "Welcome to My Dummy Blog",
-    "section": "",
-    "text": "```r # This is an R code chunk summary(cars)"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "My Projects",
-    "section": "",
-    "text": "Analysis of Cars\n\n\n\n\n\n\nYour Name\n\n\nApr 21, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Let’s investigate the relationship between fuel efficiency (mpg) and engine displacement (disp) from the mtcars dataset. Those variables have a correlation of r cor(mtcars$mpg, mtcars$disp) |&gt; format(digits=2).\n\n\nHere is a plot:"
   },
   {
     "objectID": "blog/project1/index.html#sub-header",
@@ -54,5 +26,12 @@
     "title": "Analysis of Cars",
     "section": "",
     "text": "Here is a plot:"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Resume"
   }
 ]
