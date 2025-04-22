@@ -1,0 +1,14 @@
+---
+title: "Sunghoon"
+image: "images/profile.jpg"
+about:
+    template: jolla
+    links:
+      - icon: envelope
+        href: mailto:s7jo@ucsd.edu
+      - icon: linkedin
+        href: https://www.linkedin.com/in/dustinjo3344/
+ 
+---
+
+Here is a paragraph about me!

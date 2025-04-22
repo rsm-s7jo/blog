@@ -1,0 +1,8 @@
+---
+title: "Resume"
+image: "images/resume.jpg"
+
+---
+
+Resume
+

@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Sunghoon's Blog"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - href: about.qmd
+        text: Resume
+      - href: blog.qmd  
+        text: Projects
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

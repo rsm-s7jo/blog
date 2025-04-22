@@ -1,0 +1,15 @@
+{
+  "hash": "6ffbb621bcb0e17d7a5b6ee38f72635b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Analysis of Cars\"\nauthor: Your Name\ndate: today\n---\n\n# Header\n\nLet's investigate the relationship between fuel efficiency (`mpg`) and engine displacement (`disp`) from the `mtcars` dataset. Those variables have a correlation of -0.85.\n\n## Sub-Header\n\nHere is a plot:\n\n::: {.cell}\n\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
