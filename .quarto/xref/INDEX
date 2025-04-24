@@ -16,5 +16,38 @@
   },
   "blog.qmd": {
     "blog.html": "a5f40d43"
+  },
+  "blog/project1/hw1_questions.qmd": {
+    "hw1_questions.html": "feac058b"
+  },
+  "qenv/lib/python3.12/site-packages/numpy/random/LICENSE.md": {
+    "LICENSE.html": "22110b43"
+  },
+  "qenv/lib/python3.12/site-packages/soupsieve-2.7.dist-info/licenses/LICENSE.md": {
+    "LICENSE.html": "34a76c00"
+  },
+  "qenv/lib/python3.12/site-packages/idna-3.10.dist-info/LICENSE.md": {
+    "LICENSE.html": "2a076016"
+  },
+  "qenv/lib/python3.12/site-packages/httpcore-1.0.8.dist-info/licenses/LICENSE.md": {
+    "LICENSE.html": "06e900c8"
+  },
+  "qenv/lib/python3.12/site-packages/pyzmq-26.4.0.dist-info/licenses/LICENSE.md": {
+    "LICENSE.html": "eadd6b7a"
+  },
+  "qenv/lib/python3.12/site-packages/cffi/recompiler.py": {
+    "recompiler.html": "3c505b75"
+  },
+  "qenv/lib/python3.12/site-packages/httpx-0.28.1.dist-info/licenses/LICENSE.md": {
+    "LICENSE.html": "1fb75c81"
+  },
+  "qenv/lib/python3.12/site-packages/pandas/tests/indexes/period/test_constructors.py": {
+    "test_constructors.html": "59201ce4"
+  },
+  "qenv/lib/python3.12/site-packages/pandas/tests/indexes/period/test_indexing.py": {
+    "test_indexing.html": "c8c7e69c"
+  },
+  "qenv/lib/python3.12/site-packages/pandas/tests/indexes/datetimes/test_indexing.py": {
+    "test_indexing.html": "f81fd4a8"
   }
 }
