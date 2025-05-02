@@ -255,7 +255,7 @@ window.Quarto = {
 </section>
 <section id="data-load-and-overview" class="level2">
 <h2 class="anchored" data-anchor-id="data-load-and-overview">Data Load and Overview</h2>
-<div id="2d8ec39f" class="cell" data-execution_count="1">
+<div id="cabc74f7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -319,7 +319,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="6083d2f1" class="cell" data-execution_count="2">
+<div id="bdd55703" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram comparing patent counts</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(data<span class="op">=</span>df, x<span class="op">=</span><span class="st">'patents'</span>, hue<span class="op">=</span><span class="st">'iscustomer'</span>, kde<span class="op">=</span><span class="va">True</span>, element<span class="op">=</span><span class="st">'step'</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Number of Patents by Customer Status"</span>)</span>
@@ -336,7 +336,7 @@ window.Quarto = {
 </div>
 <p>We see a clear shift in the distribution of patent counts between Blueprinty customers and non-customers.</p>
 <p>Blueprinty customers are not selected at random. It may be important to account for systematic differences in the age and regional location of customers vs non-customers.</p>
-<div id="533a9b22" class="cell" data-execution_count="3">
+<div id="b61b2788" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare mean number of patents</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df.groupby(<span class="st">'iscustomer'</span>)[<span class="st">'patents'</span>].mean().<span class="bu">round</span>(<span class="dv">2</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -354,7 +354,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="9c569a98" class="cell" data-execution_count="4">
+<div id="4171c34f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Region comparison</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>pd.crosstab(df[<span class="st">'region'</span>], df[<span class="st">'iscustomer'</span>], normalize<span class="op">=</span><span class="st">'index'</span>) <span class="op">\</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">round</span>(<span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -417,7 +417,7 @@ window.Quarto = {
 <p><span class="math display">\[
 f(Y|\lambda) = \frac{e^{-\lambda} \lambda^Y}{Y!}
 \]</span></p>
-<div id="20a57c9b" class="cell" data-execution_count="5">
+<div id="ed90b846" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> gammaln  <span class="co"># log(Y!) for stability</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -426,7 +426,7 @@ f(Y|\lambda) = \frac{e^{-\lambda} \lambda^Y}{Y!}
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(<span class="op">-</span>lmbda <span class="op">+</span> y <span class="op">*</span> np.log(lmbda) <span class="op">-</span> gammaln(y <span class="op">+</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As expected, the log-likelihood is maximized when λ = Y.</p>
-<div id="78dcb111" class="cell" data-execution_count="6">
+<div id="1550a713" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: one firm with 4 patents</span></span>
@@ -462,7 +462,7 @@ f(Y|\lambda) = \frac{e^{-\lambda} \lambda^Y}{Y!}
 \lambda_{\text{MLE}} = \bar{Y} = \frac{1}{n} \sum_{i=1}^{n} Y_i
 \]</span></p>
 <p>This confirms that the sample mean is the MLE for the Poisson parameter λ.</p>
-<div id="b46ee015" class="cell" data-execution_count="7">
+<div id="28e25533" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> optimize</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> df[<span class="st">'patents'</span>].values</span>
@@ -497,7 +497,7 @@ Y_i \sim \text{Poisson}(\lambda_i), \quad \lambda_i = e^{X_i'\beta}
 <hr>
 <section id="log-likelihood-function-1" class="level3">
 <h3 class="anchored" data-anchor-id="log-likelihood-function-1">Log-Likelihood Function</h3>
-<div id="000e3404" class="cell" data-execution_count="8">
+<div id="0ea2ba84" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> gammaln</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -508,7 +508,7 @@ Y_i \sim \text{Poisson}(\lambda_i), \quad \lambda_i = e^{X_i'\beta}
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    lam <span class="op">=</span> np.exp(lin_pred)  <span class="co"># inverse link: exp</span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(y <span class="op">*</span> lin_pred <span class="op">-</span> lam <span class="op">-</span> gammaln(y <span class="op">+</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="c4958a46" class="cell" data-execution_count="9">
+<div id="fbd78f20" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> OneHotEncoder</span>
@@ -528,7 +528,7 @@ Y_i \sim \text{Poisson}(\lambda_i), \quad \lambda_i = e^{X_i'\beta}
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">'patents'</span>].values</span>
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>X_mat <span class="op">=</span> X.values.astype(<span class="bu">float</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="db1044e9" class="cell" data-execution_count="10">
+<div id="e3bd1e82" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Negative log-likelihood</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> neg_loglik(beta):</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>poisson_log_likelihood(beta, y, X_mat)</span>
@@ -613,7 +613,7 @@ Y_i \sim \text{Poisson}(\lambda_i), \quad \lambda_i = e^{X_i'\beta}
 <p>Based on the model, using Blueprinty is associated with an average increase of approximately X patents per firm (replace X with actual value). Because this is a log-linear model, we interpret the coefficients multiplicatively on the rate scale.</p>
 <section id="interpret-blueprinty-effect-using-counterfactual-prediction" class="level4">
 <h4 class="anchored" data-anchor-id="interpret-blueprinty-effect-using-counterfactual-prediction">Interpret Blueprinty Effect (Using Counterfactual Prediction)</h4>
-<div id="3e604ca2" class="cell" data-execution_count="11">
+<div id="d6faae9b" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create X0 (all non-customers), X1 (all customers)</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>X0 <span class="op">=</span> X.copy()</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>X0[<span class="st">'iscustomer'</span>] <span class="op">=</span> <span class="dv">0</span></span>
@@ -677,7 +677,7 @@ We assume the number of reviews is a reasonable proxy for the number of bookings
 </section>
 <section id="data-load-and-overview-1" class="level3">
 <h3 class="anchored" data-anchor-id="data-load-and-overview-1">Data Load and Overview</h3>
-<div id="4f4fdeca" class="cell" data-execution_count="12">
+<div id="9505009e" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -804,7 +804,7 @@ We assume the number of reviews is a reasonable proxy for the number of bookings
 </section>
 <section id="exploratory-data-analysis-eda" class="level3">
 <h3 class="anchored" data-anchor-id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h3>
-<div id="ec75baae" class="cell" data-execution_count="13">
+<div id="7a7b823a" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram of number of reviews</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(df[<span class="st">'number_of_reviews'</span>], bins<span class="op">=</span><span class="dv">50</span>, kde<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of Number of Reviews"</span>)</span>
@@ -820,7 +820,7 @@ We assume the number of reviews is a reasonable proxy for the number of bookings
 </div>
 </div>
 </div>
-<div id="754852f9" class="cell" data-execution_count="14">
+<div id="6bcf6b41" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot: reviews by room type</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>sns.boxplot(data<span class="op">=</span>df, x<span class="op">=</span><span class="st">'room_type'</span>, y<span class="op">=</span><span class="st">'number_of_reviews'</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Reviews by Room Type"</span>)</span>
@@ -836,7 +836,7 @@ We assume the number of reviews is a reasonable proxy for the number of bookings
 </div>
 </div>
 </div>
-<div id="317db08f" class="cell" data-execution_count="15">
+<div id="014a3db8" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop NA values in key columns</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df_model <span class="op">=</span> df[[</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'number_of_reviews'</span>, <span class="st">'days'</span>, <span class="st">'room_type'</span>, <span class="st">'bathrooms'</span>, <span class="st">'bedrooms'</span>,</span>
@@ -847,7 +847,7 @@ We assume the number of reviews is a reasonable proxy for the number of bookings
 </section>
 <section id="prepare-data-for-modeling" class="level3">
 <h3 class="anchored" data-anchor-id="prepare-data-for-modeling">Prepare Data for Modeling</h3>
-<div id="0e400876" class="cell" data-execution_count="16">
+<div id="a76c285b" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> OneHotEncoder</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -868,7 +868,7 @@ We assume the number of reviews is a reasonable proxy for the number of bookings
 </section>
 <section id="estimate-poisson-regression-model" class="level3">
 <h3 class="anchored" data-anchor-id="estimate-poisson-regression-model">Estimate Poisson Regression Model</h3>
-<div id="95119f80" class="cell" data-execution_count="17">
+<div id="6104d549" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>glm_poisson <span class="op">=</span> sm.GLM(y, X_mat, family<span class="op">=</span>sm.families.Poisson())</span>
@@ -917,7 +917,7 @@ We assume the number of reviews is a reasonable proxy for the number of bookings
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Time:</td>
-<td>21:41:32</td>
+<td>21:49:18</td>
 <td data-quarto-table-cell-role="th">Pearson chi2:</td>
 <td>1.66e+06</td>
 </tr>
@@ -1068,7 +1068,7 @@ We assume the number of reviews is a reasonable proxy for the number of bookings
 </section>
 <section id="predicted-review-counts-by-instant-bookability" class="level3">
 <h3 class="anchored" data-anchor-id="predicted-review-counts-by-instant-bookability">Predicted Review Counts by Instant Bookability</h3>
-<div id="4cfdac2a" class="cell" data-execution_count="18">
+<div id="bb4952b8" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>X0 <span class="op">=</span> X.copy()</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>X0[<span class="st">'instant_bookable'</span>] <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> X.copy()</span>
