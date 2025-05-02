@@ -49,5 +49,8 @@
   },
   "qenv/lib/python3.12/site-packages/pandas/tests/indexes/datetimes/test_indexing.py": {
     "test_indexing.html": "f81fd4a8"
+  },
+  "blog/project1/hw2_questions.qmd": {
+    "hw2_questions.html": "dce3ff70"
   }
 }
