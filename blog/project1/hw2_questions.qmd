@@ -117,6 +117,7 @@ $$
 
 This confirms that the sample mean is the MLE for the Poisson parameter λ.
 
+
 ```{python}
 from scipy import optimize
 
