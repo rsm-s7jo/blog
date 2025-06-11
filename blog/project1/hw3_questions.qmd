@@ -203,7 +203,7 @@ print("\ndf_prep DataFrame prepared for estimation.")
 ## 4. Estimation via Maximum Likelihood
 
 
-::::
+:::: {.callout-note collapse="true"}
 ```{python}
 from scipy.optimize import minimize # Import only the minimize function
 
@@ -311,7 +311,7 @@ print(f"True Beta_Price:   {true_betas[3]:.4f}")
 ::::
 
 ## 5. Estimation via Bayesian Methods
-
+:::: {.callout-note collapse="true"}
 ```{python}
 import pandas as pd
 import numpy as np
@@ -560,7 +560,7 @@ print("3. Differences in how standard errors are calculated (asymptotic vs. post
 print("4. Numerical stability issues in the likelihood function for extreme parameter values.")
 print("The results from both methods should provide insights into the preference weights for different streaming service attributes.")
 ```
-
+::::
 ## 6. Discussion
 
 Observations about Parameter Estimates
